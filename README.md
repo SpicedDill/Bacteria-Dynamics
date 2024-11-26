@@ -35,13 +35,13 @@ These models simulate bacterial growth under idealized conditions using the logi
 Install dependencies with:
 ```bash
 pip install numpy matplotlib
-
+```
 ## Usage
 Run the respective Python script for each bacterial species:
-
+```
 python pseudomonas_model.py
 python staphylococcus_model.py
-
+```
 The script will generate and display the growth curve.
 
 ## Output
