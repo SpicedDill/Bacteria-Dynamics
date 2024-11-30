@@ -24,19 +24,19 @@ These models simulate bacterial growth under idealized conditions using the logi
 ### Assumptions
 
 #### Parameters for *Pseudomonas aeruginosa*
-- Initial concentration (\(N_0\)): \(10^3\) CFU/mL
-- Maximum concentration (\(N_{\text{max}}\)): \(1.67e13\) CFU/mL
-- Growth rate (\(r\)): 0.45 hour\(^{-1}\)
+- Initial concentration (`N_0`): `10^3` CFU/mL
+- Maximum concentration (`N_max`): `1.67e13` CFU/mL
+- Growth rate (`r`): `0.45 hour^-1`
 
 #### Parameters for *Staphylococcus aureus*
-- Initial concentration (\(N_0\)): \(10^3\) CFU/mL
-- Maximum concentration (\(N_{\text{max}}\)): \(5.96e12\) CFU/mL
-- Growth rate (\(r\)): 0.40 hour\(^{-1}\)
+- Initial concentration (`N_0`): `10^3` CFU/mL
+- Maximum concentration (`N_max`): `5.96e12` CFU/mL
+- Growth rate (`r`): `0.40 hour^-1`
 
 #### Radiation Decay Model Parameters
-- **Initial CFU Count (\( \text{max\_cf} \))**: Maximum bacterial count before radiation.
-- **Half-Max Dose (\( \text{half\_max\_dose} \))**: The dose at which bacterial CFUs reduce to half.
-- **Steepness (\( \text{steepness} \))**: Controls the steepness of the decay curve.
+- **Initial CFU Count (`max_cf`)**: Maximum bacterial count before radiation.
+- **Half-Max Dose (`half_max_dose`)**: The dose at which bacterial CFUs reduce to half.
+- **Steepness (`steepness`)**: Controls the steepness of the decay curve.
 
 ---
 
@@ -44,9 +44,8 @@ These models simulate bacterial growth under idealized conditions using the logi
 
 The bacterial decay due to radiation is modeled using a logistic decay function. The function calculates the CFU count as a function of the applied radiation dose. The formula used is:
 
-\[
-CFU = \text{max\_cf} \cdot \left(1 - \frac{1}{1 + e^{-\text{steepness} \cdot (\text{dose} - \text{half\_max\_dose})}}\right)
-\]
+```math
+CFU = \text{max_cf} \cdot \left(1 - \frac{1}{1 + e^{-\text{steepness} \cdot (\text{dose} - \text{half_max_dose})}}\right)
 
 #### Parameters:
 - **max\_cf**: Initial bacterial CFU count (e.g., \(300\)).
