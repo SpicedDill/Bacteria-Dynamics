@@ -43,10 +43,8 @@ These models simulate bacterial growth under idealized conditions using the logi
 ### Decay Model Explanation
 
 The bacterial decay due to radiation is modeled using a logistic decay function. The function calculates the CFU count as a function of the applied radiation dose. The formula used is:
-
 $$
-CFU = \text{max_cf} \cdot \left(1 - \frac{1}{1 + e^{-\text{steepness} \cdot (\text{dose} - \text{half_max_dose})}}\right)
-$$
+CFU = \text{max_cf} \cdot \left(1 - \frac{1}{1 + e^{-\text{steepness} \cdot (\text{dose} - \text{half_max_dose})}}\right)$$
 
 #### Parameters:
 - **max\_cf**: Initial bacterial CFU count (e.g., \(300\)).
